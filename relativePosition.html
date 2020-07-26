@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning CSS Positions</title>
+    <style>
+      body {
+        font-family: Helvetica;
+        height: 200vh;
+      }
+      .box {
+        padding: 1rem;
+        width: fit-content;
+        border-radius: 10px;
+      }
+      .staticTest {
+        position: static;
+        top: 20px;
+        bottom: 40px;
+        left: 10px;
+        right: 30px;
+        z-index: 3;
+        background-color: red;
+      }
+      .relativeTest {
+        position: relative;
+        bottom: 30px;
+        left: 30px;
+        right: 20px;
+        z-index: 1;
+        background-color: grey;
+      }
+      .absoluteTest {
+        position: absolute;
+        bottom: 30px;
+        left: 100px;
+        right: 20px;
+        z-index: 1;
+        background-color: green;
+      }
+      .fixedTest {
+        position: fixed;
+        left: 50px;
+        right: 100px;
+        z-index: 1;
+        top: 300px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="staticTest box">
+      Top, Bottom, Left, Right, Z-index wont have nay affect on this
+    </div>
+    <div class="relativeTest box">
+      Top, Bottom, Left, Right, Z-index will work with relative
+    </div>
+    <div class="absoluteTest box">
+      Top, Bottom, Left, Right, Z-index will work in absolute. This not in the
+      normal flow with other elements
+    </div>
+    <div class="fixedTest box">
+      Top, Bottom, Left, Right, Z-index will work in absolute. This not in the
+      normal flow with other elements. This is relative to the document. Try
+      scrolling the page
+    </div>
+  </body>
+</html>
